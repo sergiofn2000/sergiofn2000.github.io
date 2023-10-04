@@ -16,26 +16,56 @@ function seleccionar(){
     menuVisible = false;
 }
 //Funcion que aplica las animaciones de las habilidades
-function efectoHabilidades(){
+// ... tu código JavaScript existente ...
+
+// Funcion que aplica las animaciones de las habilidades
+function efectoHabilidades() {
     var skills = document.getElementById("skills");
     var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
-    if(distancia_skills >= 300){
-        let habilidades = document.getElementsByClassName("progreso");
-        habilidades[0].classList.add("javascript");
-        habilidades[1].classList.add("htmlcss");
-        habilidades[2].classList.add("photoshop");
-        habilidades[3].classList.add("wordpress");
-        habilidades[4].classList.add("drupal");
-        habilidades[5].classList.add("comunicacion");
-        habilidades[6].classList.add("trabajo");
-        habilidades[7].classList.add("creatividad");
-        habilidades[8].classList.add("dedicacion");
-        habilidades[9].classList.add("proyect");
+    
+    if (distancia_skills >= 300) {
+        let habilidades = document.querySelectorAll(".niveles .nivel"); // Selecciona todos los elementos .nivel
+        habilidades.forEach(nivel => nivel.classList.add("animation-class")); // Agrega la clase de animación a cada elemento
     }
 }
+
 
 
 //detecto el scrolling para aplicar la animacion de la barra de habilidades
 window.onscroll = function(){
     efectoHabilidades();
 } 
+
+//boton CV
+function download_cv(){
+    const downloadLink = document.getElementById('downloadLink');
+    downloadLink.click();
+}
+
+
+// Obtén los elementos de los enlaces
+const githubLink = document.getElementById('github-link');
+const linkedinLink = document.getElementById('gmail-link');
+const gmailLink = document.getElementById('linkedin-link');
+
+// Función para añadir la clase "fa-beat"
+function addBeatClass(event) {
+  const icon = event.currentTarget.querySelector('i');
+  icon.classList.add('fa-beat');
+}
+
+// Función para quitar la clase "fa-beat"
+function removeBeatClass(event) {
+  const icon = event.currentTarget.querySelector('i');
+  icon.classList.remove('fa-beat');
+}
+
+// Agrega eventos a los enlaces
+githubLink.addEventListener('mouseenter', addBeatClass);
+githubLink.addEventListener('mouseleave', removeBeatClass);
+
+linkedinLink.addEventListener('mouseenter', addBeatClass);
+linkedinLink.addEventListener('mouseleave', removeBeatClass);
+
+gmailLink.addEventListener('mouseenter', addBeatClass);
+gmailLink.addEventListener('mouseleave', removeBeatClass);
