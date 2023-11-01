@@ -784,6 +784,15 @@ html{
     align-items: center;
     justify-content: space-between;
 }
+.cols2{
+    margin: 9%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon_beat:hover {
+    transform: scale(1.2); /* Cambia el valor para ajustar el nivel de zoom */
+  }
 .skills-logos{
     font-size: 270%;
 }
