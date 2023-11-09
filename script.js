@@ -60,12 +60,13 @@ function removeBeatClass(event) {
   icon.classList.remove('fa-beat');
 }
 
-// Agrega eventos a los enlaces
-githubLink.addEventListener('mouseenter', addBeatClass);
-githubLink.addEventListener('mouseleave', removeBeatClass);
-
-linkedinLink.addEventListener('mouseenter', addBeatClass);
-linkedinLink.addEventListener('mouseleave', removeBeatClass);
-
-gmailLink.addEventListener('mouseenter', addBeatClass);
-gmailLink.addEventListener('mouseleave', removeBeatClass);
+if(githubLink!=="null" && linkedinLink!=="null"){
+    githubLink.addEventListener('mouseenter', addBeatClass);
+    githubLink.addEventListener('mouseleave', removeBeatClass);
+    
+    linkedinLink.addEventListener('mouseenter', addBeatClass);
+    linkedinLink.addEventListener('mouseleave', removeBeatClass);
+    
+    gmailLink.addEventListener('mouseenter', addBeatClass);
+    gmailLink.addEventListener('mouseleave', removeBeatClass);
+    }
