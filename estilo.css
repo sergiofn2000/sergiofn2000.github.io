@@ -513,7 +513,8 @@ html{
 .portfolio .galeria .proyecto .imagen_portafolio {
     width: 100%;
     display: block;
-    height: auto;
+   
+    height: 225px;
     max-height: 225px; /* Altura mÃ¡xima ajustada para mantener el aspecto 4:3 */
     border-radius: 6% 6% 0 0;
 }
