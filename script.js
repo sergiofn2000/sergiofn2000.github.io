@@ -60,7 +60,7 @@ function removeBeatClass(event) {
   icon.classList.remove('fa-beat');
 }
 
-if(githubLink!=="null" && linkedinLink!=="null"){
+if(githubLink && linkedinLink){
     githubLink.addEventListener('mouseenter', addBeatClass);
     githubLink.addEventListener('mouseleave', removeBeatClass);
     
